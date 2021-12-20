@@ -5,4 +5,13 @@
     <input type="submit" value="Registrar" (click)="registrarUsuario()"/>
 </form>
 <br/>
-<p *ngIf="registrado">{{mensaje}} con el nombre de {{nombre}} {{apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de {{nombre}} {{apellido}}</p>
+
+<ng-template #sinRegistrar>
+    <p>Nadie registrado</p>
+</ng-template>
+
+<br/><br/>
+<ul>
+    <li *ngFor="let entrada of entradas; let i = index"><span style="font-weight: bold; font-style: italic; font-size: 20px; color: blue;">{{ i + 1 }}</span> {{ entrada.titulo }}</li>
+</ul>
