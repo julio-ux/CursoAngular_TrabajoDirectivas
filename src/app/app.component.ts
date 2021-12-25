@@ -11,6 +11,7 @@ export class AppComponent {
   registrado: boolean = false;
   nombre:string = "";
   apellido:string = "";
+  cargo:string = "";
   entradas: any;
 
   constructor(){
